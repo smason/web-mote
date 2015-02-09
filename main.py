@@ -40,12 +40,12 @@ class Index(tornado.web.RequestHandler):
     def get(self):
         self.redirect("/static/index.html", permanent=True)
 
-urls = [(r"/", Index),
+urls = [(r"/",               Index),
         (r"/show-directory", ShowDirectory),
-        (r"/play", Play),
-        (r"/command", Command),
-        (r"/status", ServerStatus),
-        (r".*", Index)]
+        (r"/play",           Play),
+        (r"/command",        Command),
+        (r"/status",         ServerStatus),
+        (r".*",              Index)]
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "static")
